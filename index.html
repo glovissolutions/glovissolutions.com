@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Glovis Solutions | Energy Efficiency Solutions for Thailand</title>
 
-  <meta
-    name="description"
-    content="Glovis Solutions provides energy efficiency solutions for commercial and industrial businesses in Thailand. Our flagship NanoRefrigerant technology improves HVAC and refrigeration system efficiency."
-  >
+  <meta name="description"
+    content="Glovis Solutions provides energy efficiency technologies for commercial and industrial businesses in Thailand. Our flagship NanoRefrigerant solution improves HVAC and refrigeration system efficiency.">
 
   <style>
+
     :root {
       --green: #6a8e4e;
       --dark-green: #2e3a2f;
@@ -19,7 +19,7 @@
       --white: #ffffff;
       --light: #f5f7f3;
       --grey: #687069;
-      --border: #e2e7df;
+      --border: #e1e6de;
     }
 
     * {
@@ -34,8 +34,8 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      color: var(--black);
       background: var(--white);
+      color: var(--black);
       line-height: 1.6;
     }
 
@@ -47,7 +47,7 @@
     /* HEADER */
 
     header {
-      background: var(--white);
+      background: rgba(255,255,255,0.96);
       border-bottom: 1px solid var(--border);
       position: sticky;
       top: 0;
@@ -55,26 +55,21 @@
     }
 
     nav {
-      min-height: 78px;
+      height: 90px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .brand {
-      font-size: 21px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      color: var(--dark-green);
-    }
-
-    .brand span {
-      color: var(--green);
+    .logo img {
+      height: 68px;
+      width: auto;
+      display: block;
     }
 
     .nav-links a {
-      text-decoration: none;
       color: var(--dark-green);
+      text-decoration: none;
       margin-left: 30px;
       font-size: 14px;
       font-weight: 500;
@@ -88,16 +83,17 @@
 
     .hero {
       min-height: 650px;
+      position: relative;
       display: flex;
       align-items: center;
-      position: relative;
       overflow: hidden;
+      background: var(--white);
     }
 
     .hero-content {
-      max-width: 790px;
       position: relative;
-      z-index: 2;
+      z-index: 3;
+      max-width: 730px;
     }
 
     .eyebrow {
@@ -111,38 +107,37 @@
 
     h1 {
       color: var(--dark-green);
-      font-size: clamp(50px, 7vw, 78px);
-      line-height: 1.03;
+      font-size: clamp(50px, 6.5vw, 78px);
+      line-height: 1.04;
       letter-spacing: -3px;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     .hero p {
-      max-width: 690px;
-      font-size: 20px;
+      max-width: 650px;
       color: var(--grey);
+      font-size: 20px;
     }
 
-    .wave-one {
+    .hero-wave {
       position: absolute;
-      width: 900px;
-      height: 300px;
-      border: 55px solid rgba(106, 142, 78, 0.10);
-      border-radius: 50%;
-      right: -300px;
-      bottom: -110px;
-      transform: rotate(-8deg);
+      width: 750px;
+      right: -180px;
+      bottom: -150px;
+      opacity: 0.65;
+      z-index: 1;
+      pointer-events: none;
     }
 
-    .wave-two {
+    .hero-wave-secondary {
       position: absolute;
-      width: 720px;
-      height: 230px;
-      border: 2px solid rgba(106, 142, 78, 0.22);
-      border-radius: 50%;
-      right: -160px;
-      bottom: -40px;
-      transform: rotate(-8deg);
+      width: 480px;
+      right: 150px;
+      top: -180px;
+      opacity: 0.12;
+      transform: rotate(140deg);
+      z-index: 1;
+      pointer-events: none;
     }
 
     /* GENERAL */
@@ -160,17 +155,17 @@
       color: var(--white);
     }
 
-    .section-heading {
-      max-width: 720px;
-      margin-bottom: 55px;
-    }
-
     h2 {
       color: var(--dark-green);
       font-size: 42px;
-      line-height: 1.12;
+      line-height: 1.15;
       letter-spacing: -1.5px;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin-bottom: 55px;
     }
 
     .section-heading p {
@@ -180,37 +175,37 @@
 
     /* ABOUT */
 
-    .intro-grid {
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 90px;
       align-items: center;
     }
 
-    .intro-text p {
-      font-size: 18px;
+    .about-copy p {
       color: var(--grey);
+      font-size: 18px;
       margin-bottom: 18px;
     }
 
-    .intro-points {
+    .about-points {
       display: grid;
-      gap: 20px;
+      gap: 28px;
     }
 
-    .intro-point {
+    .about-point {
+      padding-left: 22px;
       border-left: 3px solid var(--green);
-      padding-left: 20px;
     }
 
-    .intro-point strong {
+    .about-point strong {
       display: block;
       color: var(--dark-green);
       font-size: 18px;
-      margin-bottom: 3px;
+      margin-bottom: 4px;
     }
 
-    .intro-point span {
+    .about-point span {
       color: var(--grey);
       font-size: 15px;
     }
@@ -219,98 +214,97 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 90px;
       align-items: center;
     }
 
-    .product-image {
+    .product-visual {
       min-height: 470px;
-      background: var(--light);
-      border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
-      border: 1px solid var(--border);
+      position: relative;
     }
 
-    .product-image img {
+    .product-visual::before {
+      content: "";
+      width: 360px;
+      height: 360px;
+      background: var(--light);
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .product-visual img {
       width: 100%;
-      height: 100%;
-      max-height: 470px;
+      max-width: 430px;
+      position: relative;
+      z-index: 2;
       object-fit: contain;
-      padding: 35px;
     }
 
-    .image-placeholder {
-      color: var(--green);
-      text-align: center;
-      font-weight: 600;
-      padding: 40px;
-    }
-
-    .product-text p {
+    .product-copy p {
       color: var(--grey);
       font-size: 18px;
       margin-bottom: 18px;
     }
 
-    .product-features {
-      margin-top: 30px;
+    .features {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 14px 30px;
+      margin-top: 34px;
     }
 
     .feature {
-      color: var(--dark-green);
-      font-weight: 600;
-      font-size: 15px;
-      padding: 14px 0;
       border-top: 1px solid var(--border);
+      padding-top: 14px;
+      color: var(--dark-green);
+      font-size: 15px;
+      font-weight: 600;
     }
 
     /* PERFORMANCE */
 
-    .numbers-heading h2 {
+    .performance h2 {
       color: var(--white);
     }
 
-    .numbers-heading .eyebrow {
-      color: #aac390;
+    .performance .eyebrow {
+      color: #b8cea5;
     }
 
     .numbers {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 35px;
-      margin-top: 50px;
+      margin-top: 55px;
     }
 
     .number {
-      border-top: 1px solid rgba(255, 255, 255, 0.25);
-      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.25);
+      padding-top: 25px;
     }
 
     .number strong {
-      display: block;
       color: var(--white);
+      display: block;
       font-size: 42px;
-      line-height: 1;
-      margin-bottom: 12px;
+      line-height: 1.05;
+      margin-bottom: 13px;
     }
 
     .number p {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255,255,255,0.74);
       font-size: 15px;
     }
 
     .performance-note {
-      margin-top: 40px;
-      color: rgba(255, 255, 255, 0.55);
+      color: rgba(255,255,255,0.48);
       font-size: 12px;
-      max-width: 700px;
+      max-width: 720px;
+      margin-top: 42px;
     }
 
     /* HOW IT WORKS */
@@ -318,15 +312,14 @@
     .steps {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 35px;
     }
 
     .step-number {
       color: var(--green);
       font-size: 13px;
-      letter-spacing: 1px;
       font-weight: 700;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     .step h3 {
@@ -345,29 +338,30 @@
     .partner {
       text-align: center;
       max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .partner h2 {
-      margin-bottom: 20px;
+      margin: auto;
     }
 
     .partner p {
       color: var(--grey);
       font-size: 18px;
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 680px;
+      margin: auto;
     }
 
-    .partner-name {
-      margin-top: 35px;
-      display: inline-block;
-      border: 1px solid var(--border);
-      padding: 22px 36px;
-      color: var(--dark-green);
-      background: var(--white);
-      font-weight: 700;
-      font-size: 18px;
+    .partner-logo {
+      margin-top: 25px;
+      height: 120px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .partner-logo img {
+      width: 320px;
+      height: 320px;
+      object-fit: contain;
+      transform: scale(1.4);
     }
 
     /* APPLICATIONS */
@@ -380,20 +374,19 @@
     }
 
     .application {
-      border: 1px solid var(--border);
       padding: 11px 18px;
-      border-radius: 30px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
       color: var(--dark-green);
       font-size: 14px;
-      background: var(--white);
     }
 
     /* CONTACT */
 
     .contact {
-      text-align: center;
       max-width: 760px;
-      margin: 0 auto;
+      text-align: center;
+      margin: auto;
     }
 
     .contact h2 {
@@ -401,15 +394,15 @@
     }
 
     .contact p {
-      color: rgba(255, 255, 255, 0.75);
+      color: rgba(255,255,255,0.7);
       font-size: 18px;
-      margin-bottom: 32px;
+      margin-bottom: 35px;
     }
 
     .contact-info {
+      color: var(--white);
       font-size: 18px;
       line-height: 2;
-      color: var(--white);
     }
 
     .contact-info a {
@@ -425,21 +418,30 @@
 
     footer {
       background: var(--black);
-      color: rgba(255, 255, 255, 0.65);
       padding: 28px 0;
+      color: rgba(255,255,255,0.6);
       font-size: 13px;
     }
 
     .footer-content {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
 
-    @media (max-width: 850px) {
+    @media(max-width: 850px) {
+
+      nav {
+        height: 80px;
+      }
+
+      .logo img {
+        height: 58px;
+      }
+
       .nav-links {
         display: none;
       }
@@ -452,6 +454,16 @@
         min-height: 580px;
       }
 
+      .hero-wave {
+        width: 520px;
+        right: -250px;
+        opacity: 0.35;
+      }
+
+      .hero-wave-secondary {
+        display: none;
+      }
+
       h1 {
         letter-spacing: -2px;
       }
@@ -460,10 +472,10 @@
         font-size: 34px;
       }
 
-      .intro-grid,
+      .about-grid,
       .product-grid {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 50px;
       }
 
       .numbers,
@@ -471,30 +483,43 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .product-image {
-        min-height: 360px;
-      }
     }
 
-    @media (max-width: 520px) {
+    @media(max-width: 520px) {
+
       .numbers,
       .steps,
-      .product-features {
+      .features {
         grid-template-columns: 1fr;
       }
+
+      .product-visual {
+        min-height: 350px;
+      }
+
+      .product-visual::before {
+        width: 280px;
+        height: 280px;
+      }
+
     }
 
   </style>
 </head>
 
+
 <body>
 
+
 <header>
+
   <div class="container">
+
     <nav>
 
-      <div class="brand">
-        GLOVIS <span>SOLUTIONS</span>
+      <div class="logo">
+        <img src="images/Glovis%20Logo.png"
+             alt="Glovis Solutions">
       </div>
 
       <div class="nav-links">
@@ -505,385 +530,508 @@
       </div>
 
     </nav>
+
   </div>
+
 </header>
 
 
 <main>
 
-  <!-- HERO -->
 
-  <section class="hero">
+<!-- HERO -->
 
-    <div class="container">
-      <div class="hero-content">
+<section class="hero">
 
-        <div class="eyebrow">
-          Energy Efficiency Solutions for Thailand
-        </div>
+  <img
+    class="hero-wave"
+    src="images/Glovis%20wave.png"
+    alt=""
+  >
 
-        <h1>
-          Reduce energy costs.<br>
-          Improve performance.
-        </h1>
+  <img
+    class="hero-wave-secondary"
+    src="images/Glovis%20wave.png"
+    alt=""
+  >
 
-        <p>
-          Glovis Solutions provides practical energy efficiency technologies
-          for commercial and industrial businesses in Thailand.
-        </p>
+  <div class="container">
 
-      </div>
-    </div>
-
-    <div class="wave-one"></div>
-    <div class="wave-two"></div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section id="about" class="light">
-
-    <div class="container intro-grid">
-
-      <div class="intro-text">
-
-        <div class="eyebrow">
-          Glovis Solutions
-        </div>
-
-        <h2>
-          Practical energy efficiency. Measurable results.
-        </h2>
-
-        <p>
-          We help businesses reduce energy consumption and operating costs
-          by improving the performance of existing equipment.
-        </p>
-
-        <p>
-          Our focus is on solutions that can deliver measurable operational
-          and financial impact with minimal disruption to existing operations.
-        </p>
-
-      </div>
-
-      <div class="intro-points">
-
-        <div class="intro-point">
-          <strong>Reduce energy consumption</strong>
-          <span>Improve the efficiency of energy-intensive equipment.</span>
-        </div>
-
-        <div class="intro-point">
-          <strong>Lower operating costs</strong>
-          <span>Turn efficiency improvements into measurable financial savings.</span>
-        </div>
-
-        <div class="intro-point">
-          <strong>Use existing equipment</strong>
-          <span>Improve performance without major infrastructure replacement.</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PRODUCT -->
-
-  <section id="product">
-
-    <div class="container product-grid">
-
-      <div class="product-image">
-
-        <div class="image-placeholder">
-          NanoRefrigerant<br>
-          Product Image
-        </div>
-
-      </div>
-
-
-      <div class="product-text">
-
-        <div class="eyebrow">
-          Our Flagship Solution
-        </div>
-
-        <h2>
-          NanoRefrigerant
-        </h2>
-
-        <p>
-          NanoRefrigerant is a one-time compressor lubricant additive
-          designed to improve the efficiency of existing HVAC and
-          refrigeration systems.
-        </p>
-
-        <p>
-          The technology works within the existing refrigeration circuit
-          to improve heat transfer and system performance without requiring
-          major equipment replacement.
-        </p>
-
-        <div class="product-features">
-
-          <div class="feature">
-            One-time treatment
-          </div>
-
-          <div class="feature">
-            Existing equipment
-          </div>
-
-          <div class="feature">
-            Minimal disruption
-          </div>
-
-          <div class="feature">
-            Measurable performance
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PERFORMANCE -->
-
-  <section class="dark">
-
-    <div class="container">
-
-      <div class="numbers-heading">
-
-        <div class="eyebrow">
-          Performance
-        </div>
-
-        <h2>
-          Designed to deliver measurable energy savings.
-        </h2>
-
-      </div>
-
-
-      <div class="numbers">
-
-        <div class="number">
-          <strong>Up to 20%</strong>
-          <p>
-            Potential energy savings
-          </p>
-        </div>
-
-        <div class="number">
-          <strong>8%</strong>
-          <p>
-            Performance guarantee for qualifying DX and refrigeration systems
-          </p>
-        </div>
-
-        <div class="number">
-          <strong>4%</strong>
-          <p>
-            Performance guarantee for qualifying chiller systems
-          </p>
-        </div>
-
-        <div class="number">
-          <strong>0.5–3 yrs</strong>
-          <p>
-            Typical return on investment
-          </p>
-        </div>
-
-      </div>
-
-      <div class="performance-note">
-        Actual results depend on system type, equipment condition,
-        operating hours and site conditions. Performance guarantees
-        are subject to system qualification and project terms.
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- HOW IT WORKS -->
-
-  <section>
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <div class="eyebrow">
-          How It Works
-        </div>
-
-        <h2>
-          Simple. Measurable. Low disruption.
-        </h2>
-
-      </div>
-
-
-      <div class="steps">
-
-        <div class="step">
-          <div class="step-number">01</div>
-          <h3>Assess</h3>
-          <p>
-            Identify suitable HVAC or refrigeration equipment.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">02</div>
-          <h3>Baseline</h3>
-          <p>
-            Measure existing energy consumption and system performance.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">03</div>
-          <h3>Implement</h3>
-          <p>
-            Install NanoRefrigerant into the existing system.
-          </p>
-        </div>
-
-        <div class="step">
-          <div class="step-number">04</div>
-          <h3>Verify</h3>
-          <p>
-            Measure post-installation performance and quantify the improvement.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- PARTNER -->
-
-  <section id="partner" class="light">
-
-    <div class="container partner">
+    <div class="hero-content">
 
       <div class="eyebrow">
-        Technology Partner
+        Energy Efficiency Solutions for Thailand
+      </div>
+
+      <h1>
+        Reduce energy costs.<br>
+        Improve performance.
+      </h1>
+
+      <p>
+        Glovis Solutions provides practical energy efficiency technologies
+        for commercial and industrial businesses in Thailand.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="light">
+
+  <div class="container about-grid">
+
+    <div class="about-copy">
+
+      <div class="eyebrow">
+        Glovis Solutions
       </div>
 
       <h2>
-        In partnership with ACwise Singapore.
+        Practical energy efficiency. Measurable results.
       </h2>
 
       <p>
-        Glovis Solutions partners with ACwise Singapore to bring
-        NanoRefrigerant technology and energy efficiency solutions
-        to customers in Thailand.
+        We help businesses reduce energy consumption and operating costs
+        by improving the performance of existing equipment.
       </p>
 
-      <div class="partner-name">
-        ACwise · Singapore
+      <p>
+        Our focus is on technologies that deliver measurable operational
+        and financial impact with minimal disruption to existing operations.
+      </p>
+
+    </div>
+
+
+    <div class="about-points">
+
+      <div class="about-point">
+        <strong>Reduce energy consumption</strong>
+        <span>
+          Improve the efficiency of energy-intensive equipment.
+        </span>
+      </div>
+
+      <div class="about-point">
+        <strong>Lower operating costs</strong>
+        <span>
+          Turn efficiency improvements into measurable financial savings.
+        </span>
+      </div>
+
+      <div class="about-point">
+        <strong>Use existing equipment</strong>
+        <span>
+          Improve performance without major infrastructure replacement.
+        </span>
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- APPLICATIONS -->
+<!-- PRODUCT -->
 
-  <section>
+<section id="product">
 
-    <div class="container">
+  <div class="container product-grid">
 
-      <div class="section-heading">
 
-        <div class="eyebrow">
-          Applications
-        </div>
+    <div class="product-visual">
 
-        <h2>
-          For energy-intensive operations.
-        </h2>
-
-      </div>
-
-      <div class="applications">
-
-        <div class="application">Commercial Buildings</div>
-        <div class="application">Manufacturing</div>
-        <div class="application">Hotels</div>
-        <div class="application">Hospitals</div>
-        <div class="application">Retail</div>
-        <div class="application">Cold Storage</div>
-        <div class="application">Food & Beverage</div>
-
-      </div>
+      <img
+        src="images/Nanorefrigerant.png"
+        alt="ACwise NanoRefrigerant"
+      >
 
     </div>
 
-  </section>
 
-
-  <!-- CONTACT -->
-
-  <section id="contact" class="dark">
-
-    <div class="container contact">
+    <div class="product-copy">
 
       <div class="eyebrow">
-        Contact Glovis
+        Our Flagship Solution
       </div>
 
       <h2>
-        Talk to us about energy efficiency.
+        NanoRefrigerant
       </h2>
 
       <p>
-        Contact Glovis Solutions to discuss your HVAC or refrigeration systems
-        and potential opportunities to reduce energy consumption.
+        NanoRefrigerant is a one-time compressor lubricant additive
+        designed to improve the efficiency of existing HVAC and
+        refrigeration systems.
       </p>
 
-      <div class="contact-info">
+      <p>
+        The technology works within the existing refrigeration circuit
+        to improve heat transfer and system performance without requiring
+        major equipment replacement.
+      </p>
 
-        <div>
-          Email:
-          <a href="mailto:niphon@glovissolutions.com">
-            niphon@glovissolutions.com
-          </a>
+
+      <div class="features">
+
+        <div class="feature">
+          One-time treatment
         </div>
 
-        <div>
-          Phone:
-          <a href="tel:+66810536655">
-            +66 81 053 6655
-          </a>
+        <div class="feature">
+          Existing equipment
+        </div>
+
+        <div class="feature">
+          Minimal disruption
+        </div>
+
+        <div class="feature">
+          Measurable performance
         </div>
 
       </div>
 
     </div>
 
-  </section>
+
+  </div>
+
+</section>
+
+
+<!-- PERFORMANCE -->
+
+<section class="dark performance">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Performance
+    </div>
+
+    <h2>
+      Designed to deliver measurable energy savings.
+    </h2>
+
+
+    <div class="numbers">
+
+      <div class="number">
+
+        <strong>
+          Up to 20%
+        </strong>
+
+        <p>
+          Potential energy savings
+        </p>
+
+      </div>
+
+
+      <div class="number">
+
+        <strong>
+          8%
+        </strong>
+
+        <p>
+          Performance guarantee for qualifying DX and refrigeration systems
+        </p>
+
+      </div>
+
+
+      <div class="number">
+
+        <strong>
+          4%
+        </strong>
+
+        <p>
+          Performance guarantee for qualifying chiller systems
+        </p>
+
+      </div>
+
+
+      <div class="number">
+
+        <strong>
+          0.5–3 yrs
+        </strong>
+
+        <p>
+          Typical return on investment
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="performance-note">
+
+      Actual results depend on system type, equipment condition,
+      operating hours and site conditions. Performance guarantees
+      are subject to system qualification and project terms.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section>
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        How It Works
+      </div>
+
+      <h2>
+        Simple. Measurable. Low disruption.
+      </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+
+      <div class="step">
+
+        <div class="step-number">
+          01
+        </div>
+
+        <h3>
+          Assess
+        </h3>
+
+        <p>
+          Identify suitable HVAC or refrigeration equipment.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          02
+        </div>
+
+        <h3>
+          Baseline
+        </h3>
+
+        <p>
+          Measure existing energy consumption and system performance.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          03
+        </div>
+
+        <h3>
+          Implement
+        </h3>
+
+        <p>
+          Install NanoRefrigerant into the existing system.
+        </p>
+
+      </div>
+
+
+      <div class="step">
+
+        <div class="step-number">
+          04
+        </div>
+
+        <h3>
+          Verify
+        </h3>
+
+        <p>
+          Measure post-installation performance and quantify the improvement.
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- PARTNER -->
+
+<section id="partner" class="light">
+
+  <div class="container partner">
+
+    <div class="eyebrow">
+      Technology Partner
+    </div>
+
+    <h2>
+      In partnership with ACwise Singapore.
+    </h2>
+
+    <p>
+      Glovis Solutions partners with ACwise Singapore to bring
+      NanoRefrigerant technology and energy efficiency solutions
+      to customers in Thailand.
+    </p>
+
+
+    <div class="partner-logo">
+
+      <img
+        src="images/ACwise%20Logo.png"
+        alt="ACwise Singapore"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- APPLICATIONS -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="eyebrow">
+        Applications
+      </div>
+
+      <h2>
+        For energy-intensive operations.
+      </h2>
+
+    </div>
+
+
+    <div class="applications">
+
+      <div class="application">
+        Commercial Buildings
+      </div>
+
+      <div class="application">
+        Manufacturing
+      </div>
+
+      <div class="application">
+        Hotels
+      </div>
+
+      <div class="application">
+        Hospitals
+      </div>
+
+      <div class="application">
+        Retail
+      </div>
+
+      <div class="application">
+        Cold Storage
+      </div>
+
+      <div class="application">
+        Food & Beverage
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="dark">
+
+  <div class="container contact">
+
+    <div class="eyebrow">
+      Contact Glovis
+    </div>
+
+    <h2>
+      Talk to us about energy efficiency.
+    </h2>
+
+    <p>
+      Contact Glovis Solutions to discuss your HVAC or refrigeration
+      systems and potential opportunities to reduce energy consumption.
+    </p>
+
+
+    <div class="contact-info">
+
+      <div>
+
+        Email:
+
+        <a href="mailto:niphon@glovissolutions.com">
+          niphon@glovissolutions.com
+        </a>
+
+      </div>
+
+
+      <div>
+
+        Phone:
+
+        <a href="tel:+66810536655">
+          +66 81 053 6655
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
 
 </main>
 
@@ -904,5 +1052,7 @@
 
 </footer>
 
+
 </body>
+
 </html>
