@@ -1,10 +1,498 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Glovis Solutions</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Glovis Solutions | Energy Efficiency Solutions for Thailand</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: min(1100px, 88%);
+      margin: auto;
+    }
+
+    header {
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    nav {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: #66964a;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #111827;
+      margin-left: 28px;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .label {
+      color: #66964a;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 1.05;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 20px;
+      color: #667085;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #66964a;
+      color: white;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .wave {
+      position: absolute;
+      width: 900px;
+      height: 300px;
+      right: -250px;
+      bottom: -80px;
+      border-radius: 50%;
+      border: 45px solid rgba(102, 150, 74, 0.10);
+      transform: rotate(-10deg);
+    }
+
+    section {
+      padding: 95px 0;
+    }
+
+    .light {
+      background: #f7f9f6;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 50px;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .section-heading p {
+      color: #667085;
+      font-size: 18px;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .benefit h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .benefit p {
+      color: #667085;
+    }
+
+    .benefit-line {
+      width: 45px;
+      height: 3px;
+      background: #66964a;
+      margin-bottom: 20px;
+    }
+
+    .solution {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .solution h2 {
+      margin-bottom: 22px;
+    }
+
+    .solution p {
+      color: #667085;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .solution-visual {
+      min-height: 380px;
+      background: #66964a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      text-align: center;
+      color: white;
+      font-size: 28px;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .result {
+      border-top: 1px solid #d9ded6;
+      padding-top: 25px;
+    }
+
+    .result strong {
+      display: block;
+      font-size: 38px;
+      color: #66964a;
+      margin-bottom: 8px;
+    }
+
+    .result p {
+      color: #667085;
+    }
+
+    .industries {
+      margin-top: 40px;
+      color: #667085;
+      font-size: 16px;
+    }
+
+    .contact {
+      text-align: center;
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .contact h2 {
+      font-size: 44px;
+    }
+
+    .contact p {
+      color: #667085;
+      font-size: 18px;
+      margin: 20px 0 30px;
+    }
+
+    footer {
+      border-top: 1px solid #eeeeee;
+      padding: 30px 0;
+      color: #667085;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      nav .links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .benefits,
+      .results,
+      .solution {
+        grid-template-columns: 1fr;
+      }
+
+      .solution {
+        gap: 40px;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Glovis Solutions</h1>
-  <p>Energy Efficiency Solutions for Thailand</p>
+
+<header>
+  <div class="container">
+    <nav>
+
+      <div class="brand">
+        GLOVIS <span>SOLUTIONS</span>
+      </div>
+
+      <div class="links">
+        <a href="#solution">Solution</a>
+        <a href="#results">Results</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+    </nav>
+  </div>
+</header>
+
+
+<main>
+
+  <section class="hero">
+
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="label">
+          Energy Efficiency Solutions for Thailand
+        </div>
+
+        <h1>
+          Use less energy.<br>
+          Get more from your equipment.
+        </h1>
+
+        <p>
+          Glovis Solutions helps businesses reduce energy consumption and
+          operating costs by improving the efficiency of existing HVAC and
+          refrigeration systems.
+        </p>
+
+        <a class="button" href="#contact">
+          Request a Site Assessment
+        </a>
+
+      </div>
+    </div>
+
+    <div class="wave"></div>
+
+  </section>
+
+
+  <section class="light">
+
+    <div class="container">
+
+      <div class="benefits">
+
+        <div class="benefit">
+          <div class="benefit-line"></div>
+          <h3>Lower Energy Costs</h3>
+          <p>
+            Reduce electricity consumption from energy-intensive cooling systems.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-line"></div>
+          <h3>No Major Replacement</h3>
+          <p>
+            Improve the performance of existing equipment without major infrastructure upgrades.
+          </p>
+        </div>
+
+        <div class="benefit">
+          <div class="benefit-line"></div>
+          <h3>Measured Results</h3>
+          <p>
+            Establish a baseline, implement the solution and verify actual savings.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="solution">
+
+    <div class="container solution">
+
+      <div>
+
+        <div class="label">
+          Our Flagship Solution
+        </div>
+
+        <h2>
+          NanoRefrigerant Technology
+        </h2>
+
+        <p>
+          A one-time treatment designed to improve the efficiency of HVAC and
+          refrigeration systems.
+        </p>
+
+        <p>
+          The solution works within the existing refrigeration circuit,
+          helping equipment operate more efficiently without major system replacement.
+        </p>
+
+        <p>
+          One-time treatment · Minimal disruption · Existing equipment
+        </p>
+
+      </div>
+
+      <div class="solution-visual">
+        Smarter performance<br>
+        from existing systems.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="results" class="light">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <div class="label">
+          Proven Performance
+        </div>
+
+        <h2>
+          Efficiency should be measurable.
+        </h2>
+
+        <p>
+          Our projects are built around baseline measurement and post-installation verification.
+        </p>
+
+      </div>
+
+      <div class="results">
+
+        <div class="result">
+          <strong>8%+</strong>
+          <p>
+            Savings target for qualifying HVAC and refrigeration projects.
+          </p>
+        </div>
+
+        <div class="result">
+          <strong>1×</strong>
+          <p>
+            One-time treatment rather than ongoing monthly application.
+          </p>
+        </div>
+
+        <div class="result">
+          <strong>4 Steps</strong>
+          <p>
+            Assess · Baseline · Implement · Verify
+          </p>
+        </div>
+
+      </div>
+
+      <div class="industries">
+        Commercial Buildings · Manufacturing · Hotels · Hospitals · Retail · Cold Storage · Food & Beverage
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id="contact">
+
+    <div class="container contact">
+
+      <div class="label">
+        Glovis Solutions
+      </div>
+
+      <h2>
+        See what your equipment could save.
+      </h2>
+
+      <p>
+        Talk to us about your HVAC or refrigeration systems and we'll help identify suitable opportunities for improving energy efficiency.
+      </p>
+
+      <a class="button" href="mailto:info@glovissolutions.com">
+        Contact Glovis
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+    © 2026 Glovis Solutions Co., Ltd. Bangkok, Thailand.
+  </div>
+
+</footer>
+
 </body>
 </html>
