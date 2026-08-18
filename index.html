@@ -123,8 +123,6 @@
       color: var(--grey);
     }
 
-    /* Decorative wave */
-
     .wave-one {
       position: absolute;
       width: 900px;
@@ -180,7 +178,7 @@
       font-size: 18px;
     }
 
-    /* INTRO */
+    /* ABOUT */
 
     .intro-grid {
       display: grid;
@@ -273,7 +271,7 @@
       border-top: 1px solid var(--border);
     }
 
-    /* NUMBERS */
+    /* PERFORMANCE */
 
     .numbers-heading h2 {
       color: var(--white);
@@ -291,7 +289,7 @@
     }
 
     .number {
-      border-top: 1px solid rgba(255,255,255,0.25);
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
       padding-top: 24px;
     }
 
@@ -304,13 +302,13 @@
     }
 
     .number p {
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 15px;
     }
 
     .performance-note {
       margin-top: 40px;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255, 255, 255, 0.55);
       font-size: 12px;
       max-width: 700px;
     }
@@ -403,42 +401,31 @@
     }
 
     .contact p {
-      color: rgba(255,255,255,0.75);
+      color: rgba(255, 255, 255, 0.75);
       font-size: 18px;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
 
-    .contact-details {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 18px;
-    }
-
-    .contact-link {
-      display: inline-block;
-      text-decoration: none;
-      background: var(--green);
+    .contact-info {
+      font-size: 18px;
+      line-height: 2;
       color: var(--white);
-      padding: 14px 24px;
-      border-radius: 4px;
-      font-weight: 600;
     }
 
-    .contact-link.secondary {
-      background: transparent;
-      border: 1px solid rgba(255,255,255,0.5);
+    .contact-info a {
+      color: var(--white);
+      text-decoration: none;
     }
 
-    .contact-link:hover {
-      opacity: 0.88;
+    .contact-info a:hover {
+      text-decoration: underline;
     }
 
     /* FOOTER */
 
     footer {
       background: var(--black);
-      color: rgba(255,255,255,0.65);
+      color: rgba(255, 255, 255, 0.65);
       padding: 28px 0;
       font-size: 13px;
     }
@@ -453,7 +440,6 @@
     /* MOBILE */
 
     @media (max-width: 850px) {
-
       .nav-links {
         display: none;
       }
@@ -491,19 +477,10 @@
     }
 
     @media (max-width: 520px) {
-
       .numbers,
       .steps,
       .product-features {
         grid-template-columns: 1fr;
-      }
-
-      .contact-details {
-        flex-direction: column;
-      }
-
-      .contact-link {
-        width: 100%;
       }
     }
 
@@ -623,14 +600,6 @@
     <div class="container product-grid">
 
       <div class="product-image">
-
-        <!--
-        Once you upload the NanoRefrigerant photo to GitHub,
-        replace the placeholder below with:
-
-        <img src="images/nanorefrigerant.png"
-             alt="NanoRefrigerant energy efficiency technology">
-        -->
 
         <div class="image-placeholder">
           NanoRefrigerant<br>
@@ -894,21 +863,21 @@
         and potential opportunities to reduce energy consumption.
       </p>
 
-      <div class="contact-details">
+      <div class="contact-info">
 
-        <a
-          class="contact-link"
-          href="mailto:niphon@glovissolutions.com"
-        >
-          niphon@glovissolutions.com
-        </a>
+        <div>
+          Email:
+          <a href="mailto:niphon@glovissolutions.com">
+            niphon@glovissolutions.com
+          </a>
+        </div>
 
-        <a
-          class="contact-link secondary"
-          href="tel:+66810536655"
-        >
-          +66 81 053 6655
-        </a>
+        <div>
+          Phone:
+          <a href="tel:+66810536655">
+            +66 81 053 6655
+          </a>
+        </div>
 
       </div>
 
