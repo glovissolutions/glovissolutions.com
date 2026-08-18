@@ -12,7 +12,6 @@
     content="Glovis Solutions provides energy efficiency technologies for commercial and industrial businesses in Thailand."
   >
 
-  <!-- Professional English + Thai fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -29,9 +28,8 @@
       --black: #101310;
       --white: #ffffff;
       --light: #f5f7f3;
-      --text: #5e675f;
-      --border: #dce3d9;
-      --soft-green: #e9eee5;
+      --text: #606860;
+      --border: #dce2d9;
     }
 
 
@@ -60,49 +58,45 @@
       max-width: 100%;
     }
 
-    a {
-      color: inherit;
-    }
-
     .container {
-      width: min(1180px, 88%);
+      width: min(1160px, 88%);
       margin: 0 auto;
     }
 
 
-    /* THAI TYPOGRAPHY */
+    /* THAI */
 
     html[lang="th"] body {
       font-family: "IBM Plex Sans Thai", Tahoma, sans-serif;
     }
 
     html[lang="th"] h1 {
-      font-size: clamp(42px, 4.8vw, 62px);
-      line-height: 1.22;
+      font-size: clamp(40px, 4.6vw, 58px);
+      line-height: 1.25;
       letter-spacing: 0;
       font-weight: 600;
     }
 
     html[lang="th"] h2 {
-      font-size: clamp(30px, 3vw, 40px);
-      line-height: 1.35;
+      font-size: clamp(29px, 3vw, 38px);
+      line-height: 1.4;
       letter-spacing: 0;
       font-weight: 600;
     }
 
     html[lang="th"] p {
-      line-height: 1.85;
+      line-height: 1.9;
     }
 
     html[lang="th"] .eyebrow {
-      letter-spacing: 0.7px;
+      letter-spacing: 0.5px;
     }
 
 
-    /* COMMON */
+    /* GLOBAL */
 
     section {
-      padding: 78px 0;
+      padding: 76px 0;
     }
 
     .light {
@@ -117,26 +111,27 @@
     .eyebrow {
       color: var(--green);
       font-size: 13px;
+      line-height: 1.4;
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     h1 {
-      font-size: clamp(46px, 5.5vw, 70px);
-      line-height: 1.07;
-      letter-spacing: -2.3px;
-      font-weight: 600;
       color: var(--dark-green);
+      font-size: clamp(46px, 5.2vw, 66px);
+      line-height: 1.08;
+      letter-spacing: -2.2px;
+      font-weight: 600;
     }
 
     h2 {
-      font-size: clamp(34px, 3.4vw, 43px);
-      line-height: 1.18;
-      letter-spacing: -1.4px;
-      font-weight: 600;
       color: var(--dark-green);
+      font-size: clamp(33px, 3.2vw, 41px);
+      line-height: 1.2;
+      letter-spacing: -1.2px;
+      font-weight: 600;
     }
 
     p {
@@ -146,15 +141,11 @@
 
     .section-heading {
       max-width: 760px;
-      margin-bottom: 45px;
+      margin-bottom: 42px;
     }
 
     .section-heading h2 {
-      margin-bottom: 15px;
-    }
-
-    .section-heading p {
-      max-width: 670px;
+      margin-bottom: 14px;
     }
 
 
@@ -172,45 +163,50 @@
     }
 
     nav {
-      height: 76px;
+      height: 82px;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
       gap: 30px;
     }
 
 
-    /* Clean horizontal header branding */
+    /*
+      REAL GLOVIS LOGO IN HEADER
+      The container crops some of the white margin
+      around the original square image.
+    */
 
-    .brand {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      line-height: 1;
+    .nav-logo {
+      position: relative;
+
+      width: 110px;
+      height: 76px;
+
+      overflow: hidden;
+
+      flex: 0 0 auto;
     }
 
-    .brand-main {
-      font-size: 20px;
-      font-weight: 600;
-      letter-spacing: 1.8px;
-      color: #13182a;
+    .nav-logo img {
+      position: absolute;
+
+      width: 135px;
+      max-width: none;
+
+      left: -12px;
+      top: -29px;
+
+      mix-blend-mode: multiply;
     }
 
-    .brand-sub {
-      font-size: 7px;
-      font-weight: 600;
-      letter-spacing: 4px;
-      color: var(--green);
-      margin-top: 5px;
-      padding-left: 2px;
-    }
 
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 24px;
     }
 
     .nav-links {
@@ -220,8 +216,9 @@
     }
 
     .nav-links a {
-      text-decoration: none;
       color: var(--dark-green);
+      text-decoration: none;
+
       font-size: 14px;
       font-weight: 500;
     }
@@ -235,22 +232,23 @@
 
     .languages {
       display: flex;
-      gap: 8px;
       align-items: center;
+      gap: 8px;
 
-      padding-left: 20px;
+      padding-left: 19px;
       border-left: 1px solid var(--border);
     }
 
     .language-button {
-      background: none;
       border: 0;
+      background: none;
+
+      color: #999f99;
 
       font-family: inherit;
       font-size: 13px;
       font-weight: 600;
 
-      color: #9ba19b;
       cursor: pointer;
     }
 
@@ -259,20 +257,21 @@
     }
 
     .language-divider {
-      color: #ccd0cc;
+      color: #c8ccc8;
     }
 
 
     /* HERO */
 
     .hero {
-      padding: 62px 0 75px;
+      padding: 58px 0 70px;
       overflow: hidden;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
+      grid-template-columns: 1.12fr 0.88fr;
+
       gap: 65px;
       align-items: center;
     }
@@ -283,59 +282,57 @@
     }
 
     .hero-copy h1 {
-      max-width: 720px;
-      margin-bottom: 25px;
+      max-width: 690px;
+      margin-bottom: 24px;
     }
 
     .hero-copy p {
-      max-width: 630px;
-      font-size: 19px;
+      max-width: 650px;
+
+      font-size: 18px;
+      line-height: 1.8;
     }
 
 
-    /* HERO GRAPHIC */
+    /* HERO BRAND ART */
 
     .hero-art {
-      height: 430px;
+      min-height: 410px;
+
       position: relative;
 
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
     }
 
     .hero-wave {
       position: absolute;
 
-      width: 680px;
+      width: 660px;
       max-width: none;
 
-      right: -160px;
-      bottom: -135px;
+      right: -165px;
+      bottom: -145px;
 
       opacity: 0.20;
+
       transform: rotate(-7deg) scale(1.3);
 
       pointer-events: none;
     }
 
-
-    /*
-      The source Glovis PNG has white baked into it.
-      Multiply makes white blend into a white page while
-      preserving the green/navy artwork.
-    */
-
     .hero-logo {
-      width: 305px;
+      width: 285px;
 
       position: relative;
       z-index: 3;
 
+      /*
+        Removes visual white square against
+        the white background.
+      */
       mix-blend-mode: multiply;
-
-      filter: none;
-      box-shadow: none;
     }
 
 
@@ -344,16 +341,17 @@
     .about-layout {
       display: grid;
       grid-template-columns: 0.95fr 1.05fr;
-      gap: 85px;
+
+      gap: 80px;
       align-items: start;
     }
 
     .about-copy p + p {
-      margin-top: 16px;
+      margin-top: 17px;
     }
 
 
-    /* Cleaner numbered list instead of boxes */
+    /* NUMBERED ROLE LIST */
 
     .roles {
       border-top: 1px solid var(--border);
@@ -361,36 +359,40 @@
 
     .role {
       display: grid;
-      grid-template-columns: 55px 1fr;
-      gap: 18px;
+      grid-template-columns: 50px 1fr;
 
-      padding: 22px 0;
+      gap: 17px;
+
+      padding: 20px 0;
 
       border-bottom: 1px solid var(--border);
     }
 
     .role-number {
       color: var(--green);
+
       font-size: 13px;
       font-weight: 700;
+
       padding-top: 3px;
     }
 
     .role strong {
       display: block;
 
+      color: var(--dark-green);
+
       font-size: 17px;
       font-weight: 600;
 
-      color: var(--dark-green);
-
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
 
     .role span {
       color: var(--text);
+
       font-size: 15px;
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
 
@@ -398,26 +400,27 @@
 
     .product-layout {
       display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 80px;
+      grid-template-columns: 0.88fr 1.12fr;
+
+      gap: 78px;
       align-items: center;
     }
 
     .product-visual {
-      min-height: 410px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      min-height: 390px;
 
       position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .product-background {
       position: absolute;
 
-      width: 330px;
-      height: 330px;
+      width: 325px;
+      height: 325px;
 
       border-radius: 50%;
 
@@ -430,8 +433,8 @@
     }
 
     .product-image {
-      width: 365px;
-      max-width: 95%;
+      width: 355px;
+      max-width: 94%;
 
       position: relative;
       z-index: 2;
@@ -448,15 +451,16 @@
     .features {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 0 30px;
 
-      margin-top: 28px;
+      margin-top: 27px;
 
       border-top: 1px solid var(--border);
     }
 
     .feature {
-      padding: 14px 0;
+      padding: 13px 0;
 
       border-bottom: 1px solid var(--border);
 
@@ -470,32 +474,39 @@
     /* PERFORMANCE */
 
     .performance .eyebrow {
-      color: #bbcca9;
+      color: #bdcca9;
     }
 
     .performance h2 {
       color: white;
+
       max-width: 850px;
-      margin-bottom: 15px;
+
+      margin-bottom: 14px;
     }
 
     .performance-intro {
-      color: rgba(255,255,255,0.72);
+      color: rgba(255,255,255,0.75);
+
       font-size: 17px;
+      line-height: 1.7;
+
       max-width: 720px;
     }
 
     .metrics {
       display: grid;
       grid-template-columns: repeat(4,1fr);
-      gap: 32px;
 
-      margin-top: 42px;
+      gap: 30px;
+
+      margin-top: 40px;
     }
 
     .metric {
-      border-top: 1px solid rgba(255,255,255,0.25);
-      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.24);
+
+      padding-top: 20px;
     }
 
     .metric strong {
@@ -503,9 +514,9 @@
 
       color: white;
 
-      font-size: clamp(33px,3vw,42px);
-      font-weight: 600;
+      font-size: clamp(32px, 3vw, 40px);
       line-height: 1.1;
+      font-weight: 600;
 
       margin-bottom: 11px;
     }
@@ -513,39 +524,40 @@
     .metric span {
       display: block;
 
-      color: rgba(255,255,255,0.78);
+      color: rgba(255,255,255,0.80);
 
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.65;
 
       max-width: 250px;
     }
 
     .performance-note {
-      color: rgba(255,255,255,0.52);
+      max-width: 850px;
+
+      margin-top: 32px;
+
+      color: rgba(255,255,255,0.58);
 
       font-size: 13px;
       line-height: 1.65;
-
-      max-width: 840px;
-
-      margin-top: 35px;
     }
 
 
-    /* HOW IT WORKS */
+    /* PROCESS */
 
     .process {
       position: relative;
-      margin-top: 15px;
+
+      margin-top: 12px;
     }
 
     .process-line {
       position: absolute;
 
-      top: 22px;
-      left: 6%;
-      right: 6%;
+      top: 21px;
+      left: 4%;
+      right: 4%;
 
       height: 1px;
 
@@ -557,35 +569,32 @@
 
       display: grid;
       grid-template-columns: repeat(4,1fr);
-      gap: 40px;
-    }
 
-    .step {
-      position: relative;
+      gap: 38px;
     }
 
     .step-circle {
-      width: 44px;
-      height: 44px;
-
-      border-radius: 50%;
-
-      background: white;
-      border: 1px solid var(--green);
+      width: 42px;
+      height: 42px;
 
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 20px;
+
+      background: white;
+
+      border: 1px solid var(--green);
+      border-radius: 50%;
 
       color: var(--green);
 
       font-size: 12px;
       font-weight: 700;
-
-      margin-bottom: 22px;
-
-      position: relative;
-      z-index: 2;
     }
 
     .step h3 {
@@ -594,7 +603,7 @@
       font-size: 19px;
       font-weight: 600;
 
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
 
     .step p {
@@ -613,7 +622,7 @@
     }
 
     .industry {
-      padding: 16px 10px 16px 0;
+      padding: 15px 10px 15px 0;
 
       border-bottom: 1px solid var(--border);
 
@@ -625,98 +634,114 @@
 
     .industry::before {
       content: "•";
+
       color: var(--green);
-      margin-right: 10px;
+
+      margin-right: 9px;
     }
 
     .systems-title {
-      margin-top: 35px;
-      margin-bottom: 13px;
+      margin-top: 34px;
+      margin-bottom: 12px;
 
       color: var(--green);
 
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 1.5px;
+
+      letter-spacing: 1.4px;
       text-transform: uppercase;
     }
 
     .systems {
       display: flex;
       flex-wrap: wrap;
+
       gap: 8px 0;
     }
 
     .system {
-      color: var(--text);
-      font-size: 14px;
-
       padding-right: 14px;
       margin-right: 14px;
 
       border-right: 1px solid var(--border);
+
+      color: var(--text);
+
+      font-size: 14px;
     }
 
     .system:last-child {
-      border-right: 0;
+      border-right: none;
     }
 
 
     /* PARTNER */
 
     .partner .eyebrow {
-      color: #bbcca9;
+      color: #bdcca9;
     }
 
     .partner-layout {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.08fr 0.92fr;
+
       gap: 70px;
       align-items: center;
     }
 
     .partner h2 {
       color: white;
-      margin-bottom: 18px;
+
+      margin-bottom: 17px;
     }
 
     .partner-copy p {
-      color: rgba(255,255,255,0.74);
-      max-width: 650px;
+      color: rgba(255,255,255,0.76);
+
+      font-size: 17px;
+      line-height: 1.75;
+
+      max-width: 640px;
     }
 
 
-    /* ACWISE MARK */
+    /* ACWISE */
 
     .acwise-lockup {
+      min-height: 175px;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       gap: 25px;
 
-      padding: 32px;
+      padding: 30px;
 
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 3px;
+
+      background: rgba(0,0,0,0.05);
     }
 
 
     /*
-      Uploaded ACwise image:
-      green icon sits around x50–164 / y195–271.
-      This window shows only that green symbol.
+      Crops only the green ACwise symbol
+      from the uploaded white-background PNG.
     */
 
     .acwise-symbol {
       width: 125px;
-      height: 88px;
-
-      overflow: hidden;
+      height: 90px;
 
       position: relative;
 
-      background: white;
+      overflow: hidden;
 
       flex: 0 0 auto;
+
+      background: white;
     }
 
     .acwise-symbol img {
@@ -734,10 +759,9 @@
 
       color: white;
 
-      font-size: 32px;
-      font-weight: 600;
-
+      font-size: 31px;
       line-height: 1;
+      font-weight: 600;
     }
 
     .acwise-text span {
@@ -745,13 +769,12 @@
 
       margin-top: 8px;
 
-      color: #bbcca9;
+      color: #bdcca9;
 
       font-size: 12px;
       font-weight: 600;
 
       letter-spacing: 2px;
-
       text-transform: uppercase;
     }
 
@@ -760,19 +783,18 @@
 
     .contact-layout {
       display: grid;
-      grid-template-columns: 1fr 0.8fr;
+      grid-template-columns: 1fr 0.82fr;
 
-      gap: 80px;
-
+      gap: 78px;
       align-items: start;
     }
 
     .contact-copy h2 {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     .contact-copy p {
-      max-width: 610px;
+      max-width: 590px;
     }
 
     .contact-details {
@@ -780,18 +802,20 @@
     }
 
     .contact-row {
-      padding: 18px 0;
+      padding: 17px 0;
+
       border-bottom: 1px solid var(--border);
     }
 
     .contact-label {
       display: block;
 
-      margin-bottom: 4px;
+      margin-bottom: 3px;
 
       color: var(--green);
 
       font-size: 11px;
+      line-height: 1.4;
       font-weight: 700;
 
       letter-spacing: 1.4px;
@@ -799,12 +823,12 @@
     }
 
     .contact-row a {
-      text-decoration: none;
-
       color: var(--dark-green);
 
       font-size: 17px;
       font-weight: 500;
+
+      text-decoration: none;
     }
 
     .contact-row a:hover {
@@ -815,11 +839,11 @@
     /* FOOTER */
 
     footer {
+      padding: 22px 0;
+
       background: var(--black);
 
-      padding: 23px 0;
-
-      color: rgba(255,255,255,0.56);
+      color: rgba(255,255,255,0.57);
 
       font-size: 12px;
     }
@@ -847,16 +871,16 @@
       }
 
       .hero-art {
-        height: 340px;
+        min-height: 320px;
       }
 
       .hero-logo {
-        width: 270px;
+        width: 260px;
       }
 
       .hero-wave {
-        width: 550px;
-        right: -100px;
+        width: 540px;
+        right: -110px;
       }
 
       .metrics {
@@ -867,10 +891,6 @@
         grid-template-columns: 1fr 1fr;
       }
 
-      .partner-layout {
-        gap: 45px;
-      }
-
     }
 
 
@@ -879,11 +899,23 @@
     @media(max-width: 720px) {
 
       section {
-        padding: 62px 0;
+        padding: 60px 0;
       }
 
       nav {
-        height: 70px;
+        height: 72px;
+      }
+
+      .nav-logo {
+        width: 92px;
+        height: 68px;
+      }
+
+      .nav-logo img {
+        width: 118px;
+
+        left: -13px;
+        top: -25px;
       }
 
       .nav-links {
@@ -891,33 +923,27 @@
       }
 
       .languages {
-        border-left: 0;
         padding-left: 0;
-      }
-
-      .brand-main {
-        font-size: 17px;
-      }
-
-      .brand-sub {
-        font-size: 6px;
+        border-left: none;
       }
 
       .hero {
-        padding-top: 45px;
+        padding-top: 42px;
       }
 
       .hero-art {
-        height: 300px;
+        min-height: 280px;
       }
 
       .hero-logo {
-        width: 230px;
+        width: 220px;
       }
 
       .hero-wave {
-        width: 480px;
-        right: -170px;
+        width: 470px;
+
+        right: -180px;
+
         opacity: 0.16;
       }
 
@@ -929,7 +955,8 @@
 
       .steps {
         grid-template-columns: 1fr;
-        gap: 26px;
+
+        gap: 25px;
       }
 
       .process-line {
@@ -940,7 +967,7 @@
         display: grid;
         grid-template-columns: 48px 1fr;
 
-        gap: 16px;
+        gap: 15px;
       }
 
       .step-circle {
@@ -948,11 +975,12 @@
       }
 
       .step-content {
-        padding-top: 7px;
+        padding-top: 6px;
       }
 
       .acwise-lockup {
         flex-direction: column;
+
         text-align: center;
       }
 
@@ -972,24 +1000,30 @@
 
     <nav>
 
-      <a class="brand" href="#top">
 
-        <span class="brand-main">
-          GLOVIS
-        </span>
+      <a
+        class="nav-logo"
+        href="#top"
+        aria-label="Glovis Solutions"
+      >
 
-        <span class="brand-sub">
-          SOLUTIONS
-        </span>
+        <img
+          src="images/Glovis%20Logo.png"
+          alt="Glovis Solutions"
+        >
 
       </a>
 
 
       <div class="nav-right">
 
+
         <div class="nav-links">
 
-          <a href="#about" data-i18n="navAbout">
+          <a
+            href="#about"
+            data-i18n="navAbout"
+          >
             About
           </a>
 
@@ -997,15 +1031,24 @@
             NanoRefrigerant
           </a>
 
-          <a href="#industries" data-i18n="navIndustries">
+          <a
+            href="#industries"
+            data-i18n="navIndustries"
+          >
             Industries
           </a>
 
-          <a href="#partner" data-i18n="navPartner">
+          <a
+            href="#partner"
+            data-i18n="navPartner"
+          >
             Partner
           </a>
 
-          <a href="#contact" data-i18n="navContact">
+          <a
+            href="#contact"
+            data-i18n="navContact"
+          >
             Contact
           </a>
 
@@ -1036,7 +1079,9 @@
 
         </div>
 
+
       </div>
+
 
     </nav>
 
@@ -1059,6 +1104,7 @@
 
       <div class="hero-copy">
 
+
         <div
           class="eyebrow"
           data-i18n="heroEyebrow"
@@ -1068,8 +1114,7 @@
 
 
         <h1 data-i18n="heroTitle">
-          Reduce energy costs.
-          Improve existing system performance.
+          Reduce energy costs. Improve existing system performance.
         </h1>
 
 
@@ -1081,10 +1126,12 @@
 
         </p>
 
+
       </div>
 
 
       <div class="hero-art">
+
 
         <img
           class="hero-wave"
@@ -1092,11 +1139,13 @@
           alt=""
         >
 
+
         <img
           class="hero-logo"
           src="images/Glovis%20Logo.png"
           alt="Glovis Solutions"
         >
+
 
       </div>
 
@@ -1120,6 +1169,7 @@
 
     <div class="section-heading">
 
+
       <div
         class="eyebrow"
         data-i18n="aboutEyebrow"
@@ -1127,10 +1177,11 @@
         About Glovis
       </div>
 
+
       <h2 data-i18n="aboutTitle">
-        Practical energy efficiency.
-        Measurable results.
+        Practical energy efficiency. Measurable results.
       </h2>
+
 
     </div>
 
@@ -1140,13 +1191,15 @@
 
       <div class="about-copy">
 
+
         <p data-i18n="aboutP1">
 
-          Glovis Solutions helps businesses in Thailand
-          reduce energy consumption and operating costs
-          through practical retrofit and efficiency technologies.
+          Glovis Solutions helps businesses in Thailand reduce
+          energy consumption and operating costs through practical
+          retrofit and efficiency technologies.
 
         </p>
+
 
         <p data-i18n="aboutP2">
 
@@ -1155,6 +1208,7 @@
           and with minimal disruption to daily operations.
 
         </p>
+
 
       </div>
 
@@ -1175,8 +1229,7 @@
             </strong>
 
             <span data-i18n="role1Text">
-              Select practical energy-saving solutions
-              suitable for the Thai market.
+              Select practical energy-saving solutions suitable for the Thai market.
             </span>
 
           </div>
@@ -1197,8 +1250,7 @@
             </strong>
 
             <span data-i18n="role2Text">
-              Support installation, deployment
-              and local project execution.
+              Support installation, deployment and local project execution.
             </span>
 
           </div>
@@ -1219,8 +1271,7 @@
             </strong>
 
             <span data-i18n="role3Text">
-              Compare baseline and post-installation
-              system performance.
+              Compare baseline and post-installation system performance.
             </span>
 
           </div>
@@ -1241,8 +1292,7 @@
             </strong>
 
             <span data-i18n="role4Text">
-              Support customers throughout implementation
-              and operation.
+              Support customers throughout implementation and operation.
             </span>
 
           </div>
@@ -1318,19 +1368,31 @@
 
         <div class="features">
 
-          <div class="feature" data-i18n="feature1">
+          <div
+            class="feature"
+            data-i18n="feature1"
+          >
             One-time treatment
           </div>
 
-          <div class="feature" data-i18n="feature2">
+          <div
+            class="feature"
+            data-i18n="feature2"
+          >
             Works with existing equipment
           </div>
 
-          <div class="feature" data-i18n="feature3">
+          <div
+            class="feature"
+            data-i18n="feature3"
+          >
             Minimal operational disruption
           </div>
 
-          <div class="feature" data-i18n="feature4">
+          <div
+            class="feature"
+            data-i18n="feature4"
+          >
             Measurable performance
           </div>
 
@@ -1371,10 +1433,7 @@
       class="performance-intro"
       data-i18n="performanceIntro"
     >
-
-      A practical efficiency solution built around
-      measurable system performance.
-
+      A practical efficiency solution built around measurable system performance.
     </p>
 
 
@@ -1401,8 +1460,7 @@
         </strong>
 
         <span data-i18n="metric2">
-          Performance guarantee for qualifying
-          DX and refrigeration systems
+          Performance guarantee for qualifying DX and refrigeration systems
         </span>
 
       </div>
@@ -1415,8 +1473,7 @@
         </strong>
 
         <span data-i18n="metric3">
-          Performance guarantee for qualifying
-          chiller systems
+          Performance guarantee for qualifying chiller systems
         </span>
 
       </div>
@@ -1455,7 +1512,7 @@
 </section>
 
 
-<!-- PROCESS -->
+<!-- HOW IT WORKS -->
 
 <section>
 
@@ -1464,6 +1521,7 @@
 
     <div class="section-heading">
 
+
       <div
         class="eyebrow"
         data-i18n="processEyebrow"
@@ -1471,9 +1529,11 @@
         How It Works
       </div>
 
+
       <h2 data-i18n="processTitle">
         Simple. Measurable. Low disruption.
       </h2>
+
 
     </div>
 
@@ -1520,7 +1580,7 @@
             </h3>
 
             <p data-i18n="step2Text">
-              Measure existing energy consumption and performance.
+              Measure existing energy consumption and system performance.
             </p>
 
           </div>
@@ -1562,8 +1622,7 @@
             </h3>
 
             <p data-i18n="step4Text">
-              Measure post-installation performance and
-              quantify the improvement.
+              Measure post-installation performance and quantify the improvement.
             </p>
 
           </div>
@@ -1575,7 +1634,6 @@
 
 
     </div>
-
 
   </div>
 
@@ -1594,6 +1652,7 @@
 
     <div class="section-heading">
 
+
       <div
         class="eyebrow"
         data-i18n="industriesEyebrow"
@@ -1601,9 +1660,11 @@
         Applications
       </div>
 
+
       <h2 data-i18n="industriesTitle">
         Suitable for energy-intensive operations.
       </h2>
+
 
       <p data-i18n="industriesIntro">
 
@@ -1611,6 +1672,7 @@
         of commercial and industrial cooling environments.
 
       </p>
+
 
     </div>
 
@@ -1731,9 +1793,9 @@
 
         <p data-i18n="partnerDescription">
 
-          Glovis Solutions partners with ACwise Singapore
-          to bring NanoRefrigerant technology and energy
-          efficiency solutions to customers in Thailand.
+          Glovis Solutions partners with ACwise Singapore to bring
+          NanoRefrigerant technology and energy efficiency solutions
+          to customers in Thailand.
 
         </p>
 
@@ -1786,11 +1848,11 @@
 
   <div class="container">
 
-
     <div class="contact-layout">
 
 
       <div class="contact-copy">
+
 
         <div
           class="eyebrow"
@@ -1799,17 +1861,19 @@
           Contact
         </div>
 
+
         <h2 data-i18n="contactTitle">
           Talk to us about energy efficiency.
         </h2>
 
+
         <p data-i18n="contactDescription">
 
           Contact Glovis Solutions to discuss opportunities
-          to improve the performance of your HVAC or
-          refrigeration systems.
+          to improve the performance of your HVAC or refrigeration systems.
 
         </p>
+
 
       </div>
 
@@ -1854,7 +1918,6 @@
 
     </div>
 
-
   </div>
 
 </section>
@@ -1888,15 +1951,24 @@
 
 const translations = {
 
+
   en: {
 
     pageTitle:
       "Glovis Solutions | Energy Efficiency Solutions for Thailand",
 
-    navAbout: "About",
-    navIndustries: "Industries",
-    navPartner: "Partner",
-    navContact: "Contact",
+    navAbout:
+      "About",
+
+    navIndustries:
+      "Industries",
+
+    navPartner:
+      "Partner",
+
+    navContact:
+      "Contact",
+
 
     heroEyebrow:
       "Energy Efficiency Solutions for Thailand",
@@ -1906,6 +1978,7 @@ const translations = {
 
     heroDescription:
       "Glovis Solutions provides practical energy efficiency technologies for commercial and industrial businesses in Thailand.",
+
 
     aboutEyebrow:
       "About Glovis",
@@ -1918,6 +1991,7 @@ const translations = {
 
     aboutP2:
       "We focus on solutions that improve the performance of existing systems without major equipment replacement and with minimal disruption to daily operations.",
+
 
     role1Title:
       "Identify and evaluate suitable technologies",
@@ -1943,6 +2017,7 @@ const translations = {
     role4Text:
       "Support customers throughout implementation and operation.",
 
+
     productEyebrow:
       "Flagship Solution",
 
@@ -1963,6 +2038,7 @@ const translations = {
 
     feature4:
       "Measurable performance",
+
 
     performanceEyebrow:
       "Performance",
@@ -1987,6 +2063,7 @@ const translations = {
 
     performanceNote:
       "Actual results depend on system type, equipment condition, operating hours and site conditions. Performance guarantees are subject to system qualification and project terms.",
+
 
     processEyebrow:
       "How It Works",
@@ -2018,6 +2095,7 @@ const translations = {
     step4Text:
       "Measure post-installation performance and quantify the improvement.",
 
+
     industriesEyebrow:
       "Applications",
 
@@ -2027,21 +2105,39 @@ const translations = {
     industriesIntro:
       "NanoRefrigerant can be applied across a range of commercial and industrial cooling environments.",
 
-    industry1: "Commercial Buildings",
-    industry2: "Manufacturing",
-    industry3: "Hotels",
-    industry4: "Hospitals",
-    industry5: "Retail",
-    industry6: "Cold Storage & Cold Chain",
-    industry7: "Food & Beverage",
-    industry8: "Logistics",
-    industry9: "Education",
+    industry1:
+      "Commercial Buildings",
+
+    industry2:
+      "Manufacturing",
+
+    industry3:
+      "Hotels",
+
+    industry4:
+      "Hospitals",
+
+    industry5:
+      "Retail",
+
+    industry6:
+      "Cold Storage & Cold Chain",
+
+    industry7:
+      "Food & Beverage",
+
+    industry8:
+      "Logistics",
+
+    industry9:
+      "Education",
 
     systemsTitle:
       "Compatible System Types",
 
     system6:
       "Refrigeration Systems",
+
 
     partnerEyebrow:
       "Technology Partner",
@@ -2051,6 +2147,7 @@ const translations = {
 
     partnerDescription:
       "Glovis Solutions partners with ACwise Singapore to bring NanoRefrigerant technology and energy efficiency solutions to customers in Thailand.",
+
 
     contactEyebrow:
       "Contact",
@@ -2093,6 +2190,7 @@ const translations = {
     navContact:
       "ติดต่อ",
 
+
     heroEyebrow:
       "โซลูชันเพิ่มประสิทธิภาพการใช้พลังงานสำหรับประเทศไทย",
 
@@ -2101,6 +2199,7 @@ const translations = {
 
     heroDescription:
       "Glovis Solutions นำเสนอโซลูชันด้านการเพิ่มประสิทธิภาพการใช้พลังงานสำหรับองค์กรธุรกิจและภาคอุตสาหกรรมในประเทศไทย",
+
 
     aboutEyebrow:
       "เกี่ยวกับเรา",
@@ -2113,6 +2212,7 @@ const translations = {
 
     aboutP2:
       "เรามุ่งเน้นโซลูชันที่ช่วยเพิ่มประสิทธิภาพของระบบที่มีอยู่เดิม โดยไม่จำเป็นต้องเปลี่ยนอุปกรณ์หลัก และลดผลกระทบต่อการดำเนินงานประจำวันให้น้อยที่สุด",
+
 
     role1Title:
       "คัดสรรและประเมินเทคโนโลยีที่เหมาะสม",
@@ -2138,6 +2238,7 @@ const translations = {
     role4Text:
       "ดูแลลูกค้าตลอดกระบวนการติดตั้งและการใช้งาน",
 
+
     productEyebrow:
       "โซลูชันหลัก",
 
@@ -2158,6 +2259,7 @@ const translations = {
 
     feature4:
       "สามารถตรวจวัดผลได้",
+
 
     performanceEyebrow:
       "ประสิทธิภาพ",
@@ -2182,6 +2284,7 @@ const translations = {
 
     performanceNote:
       "ผลลัพธ์จริงขึ้นอยู่กับประเภทของระบบ สภาพอุปกรณ์ ชั่วโมงการใช้งาน และสภาพหน้างาน การรับประกันผลขึ้นอยู่กับการประเมินระบบและเงื่อนไขของแต่ละโครงการ",
+
 
     processEyebrow:
       "ขั้นตอนการดำเนินงาน",
@@ -2212,6 +2315,7 @@ const translations = {
 
     step4Text:
       "ตรวจวัดผลหลังการติดตั้งและวิเคราะห์การเพิ่มขึ้นของประสิทธิภาพ",
+
 
     industriesEyebrow:
       "การประยุกต์ใช้งาน",
@@ -2255,6 +2359,7 @@ const translations = {
     system6:
       "ระบบทำความเย็น",
 
+
     partnerEyebrow:
       "พันธมิตรด้านเทคโนโลยี",
 
@@ -2263,6 +2368,7 @@ const translations = {
 
     partnerDescription:
       "Glovis Solutions ร่วมมือกับ ACwise ประเทศสิงคโปร์ เพื่อนำเทคโนโลยี NanoRefrigerant และโซลูชันด้านการเพิ่มประสิทธิภาพพลังงานมาสู่ลูกค้าในประเทศไทย",
+
 
     contactEyebrow:
       "ติดต่อ",
@@ -2316,13 +2422,19 @@ function setLanguage(language) {
   document
     .getElementById("enButton")
     .classList
-    .toggle("active", language === "en");
+    .toggle(
+      "active",
+      language === "en"
+    );
 
 
   document
     .getElementById("thButton")
     .classList
-    .toggle("active", language === "th");
+    .toggle(
+      "active",
+      language === "th"
+    );
 
 
   localStorage.setItem(
@@ -2334,13 +2446,18 @@ function setLanguage(language) {
 
 
 const savedLanguage =
-  localStorage.getItem("glovisLanguage");
+  localStorage.getItem(
+    "glovisLanguage"
+  );
 
 
-setLanguage(savedLanguage || "en");
+setLanguage(
+  savedLanguage || "en"
+);
 
 </script>
 
 
 </body>
+
 </html>
